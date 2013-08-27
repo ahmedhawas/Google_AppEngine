@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	  <welcome-file-list>
+         <welcome-file>loginRedirect.jsp</welcome-file> 
+       <!--  <welcome-file>index.html</welcome-file> -->
+    </welcome-file-list>
+ <servlet>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+  <init-param>
+   <param-name>services</param-name>
+   <param-value/>
+  </init-param>
+ </servlet>
+ 
+ <servlet-mapping>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <url-pattern>/_ah/spi/*</url-pattern>
+ </servlet-mapping>
+ 
+  <servlet>
+        <servlet-name>sign</servlet-name>
+        <servlet-class>guestbook1.SignGuestbookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sign</servlet-name>
+        <url-pattern>/sign</url-pattern>
+    </servlet-mapping>
+    
+
+    <servlet>
+    	<servlet-name>guestbookJSP</servlet-name>
+    	<jsp-file>/guestbook1.jsp</jsp-file>
+  	</servlet>
+  	<servlet-mapping>
+   	 	<servlet-name>guestbookJSP</servlet-name>
+    	<url-pattern>/guestbookJSP</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+    	<servlet-name>todoJSP</servlet-name>
+    	<jsp-file>/todo.jsp</jsp-file>
+  	</servlet>
+  	<servlet-mapping>
+   	 	<servlet-name>todoJSP</servlet-name>
+    	<url-pattern>/todoJSP</url-pattern>
+  	</servlet-mapping>
+  	
+  	
+  	<servlet>
+    	<servlet-name>loginRedirect</servlet-name>
+    	<jsp-file>/loginRedirect.jsp</jsp-file>
+  	</servlet>
+  	<servlet-mapping>
+   	 	<servlet-name>loginRedirect</servlet-name>
+    	<url-pattern>/loginRedirect</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+        <servlet-name>JPATransactionsServlet_Group12</servlet-name>
+        <servlet-class>guestbook1.JPATransactionsServlet_Group12</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JPATransactionsServlet_Group12</servlet-name>
+        <url-pattern>/JPATransactionsServlet_Group12</url-pattern>
+    </servlet-mapping>
+    
+    	<servlet>
+        <servlet-name>BookQuery_Group12</servlet-name>
+        <servlet-class>guestbook1.BookQuery_Group12</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookQuery_Group12</servlet-name>
+        <url-pattern>/BookQuery_Group12</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ToDo_Delete</servlet-name>
+        <servlet-class>guestbook1.ToDo_Delete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ToDo_Delete</servlet-name>
+        <url-pattern>/ToDo_Delete</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Contact_Delete</servlet-name>
+        <servlet-class>guestbook1.Contact_Delete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Contact_Delete</servlet-name>
+        <url-pattern>/Contact_Delete</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ToDo</servlet-name>
+        <servlet-class>guestbook1.ToDo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ToDo</servlet-name>
+        <url-pattern>/ToDo</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>ToDoQuery</servlet-name>
+        <servlet-class>guestbook1.ToDoQuery</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ToDoQuery</servlet-name>
+        <url-pattern>/ToDoQuery</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>JPATransactions_ToDo</servlet-name>
+        <servlet-class>guestbook1.JPATransactions_ToDo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JPATransactions_ToDo</servlet-name>
+        <url-pattern>/JPATransactions_ToDo</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Geocoder</servlet-name>
+        <servlet-class>guestbook1.Geocoder</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Geocoder</servlet-name>
+        <url-pattern>/Geocoder</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>todoEntry</servlet-name>
+    	<jsp-file>/todoEntry.jsp</jsp-file>
+  	</servlet>
+  	<servlet-mapping>
+   	 	<servlet-name>todoEntry</servlet-name>
+    	<url-pattern>/todoEntry</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+    	<servlet-name>Calendar</servlet-name>
+    	<jsp-file>/Calendar.jsp</jsp-file>
+  	</servlet>
+  	<servlet-mapping>
+   	 	<servlet-name>Calendar</servlet-name>
+    	<url-pattern>/Calendar</url-pattern>
+  	</servlet-mapping>
+  	
+  	
+  	<servlet>
+        <servlet-name>AddEvent</servlet-name>
+        <servlet-class>guestbook1.AddEvent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddEvent</servlet-name>
+        <url-pattern>/AddEvent</url-pattern>
+    </servlet-mapping>
+    
+    
+  	<servlet>
+        <servlet-name>CalendarAuthenticate</servlet-name>
+        <servlet-class>guestbook1.CalendarAuthenticate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CalendarAuthenticate</servlet-name>
+        <url-pattern>/CalendarAuthenticate</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CalendarInteract</servlet-name>
+        <servlet-class>guestbook1.CalendarInteract</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CalendarInteract</servlet-name>
+        <url-pattern>/CalendarInteract</url-pattern>
+    </servlet-mapping>
+    
+      <servlet>
+        <servlet-name>CalendarLogout</servlet-name>
+        <servlet-class>guestbook1.CalendarLogout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CalendarLogout</servlet-name>
+        <url-pattern>/CalendarLogout</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>UpdateEvent</servlet-name>
+        <servlet-class>guestbook1.UpdateEvent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateEvent</servlet-name>
+        <url-pattern>/UpdateEvent</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>DeleteEvent</servlet-name>
+        <servlet-class>guestbook1.DeleteEvent</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteEvent</servlet-name>
+        <url-pattern>/DeleteEvent</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>logoutRedirect</servlet-name>
+    	<jsp-file>/logoutRedirect.jsp</jsp-file>
+  	</servlet>
+  	<servlet-mapping>
+   	 	<servlet-name>logoutRedirect</servlet-name>
+    	<url-pattern>/logoutRedirect</url-pattern>
+  	</servlet-mapping>
+  	
+  	 <servlet>
+    	<servlet-name>loginRedirect2</servlet-name>
+    	<jsp-file>/loginRedirect2.jsp</jsp-file>
+  	</servlet>
+  	<servlet-mapping>
+   	 	<servlet-name>loginRedirect2</servlet-name>
+    	<url-pattern>/loginRedirect2</url-pattern>
+  	</servlet-mapping>
+    
+    
+ 
+ 
+</web-app>
